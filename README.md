@@ -82,6 +82,7 @@ URL: `GET /visited_domains?from=1545221231&to=1545217638
 curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638"
 
 ### Пример ответа
+<pre>
 {
   "domains": [
     "ya.ru",
@@ -90,8 +91,9 @@ curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
   ],
   "status": "ok"
 }
-
+<pre>
 ### Пример запроса в Python
+<pre>
 import requests
 
 url_visited_domains = "http://127.0.0.1:5000/visited_domains"
@@ -107,12 +109,13 @@ if response_visited_domains.status_code == 200:
     print("Уникальные домены:", unique_domains)
 else:
     print("Ошибка при получении уникальных доменов:", response_visited_domains.json()["status"])
-
+<pre>
 ### Пример запроса через браузер
 Откройте веб-браузер и введите следующий URL, заменив параметры from и to на необходимые значения:
 http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
 
 ### Пример ответа
+<pre>
 {
   "domains": [
     "ya.ru",
@@ -121,7 +124,7 @@ http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
   ],
   "status": "ok"
 }
-
+<pre>
 
 ## Примечание
 - Сервис использует SQLite в качестве базы данных. Вы можете изменить строку подключения в файле `app.py` по своим требованиям.
