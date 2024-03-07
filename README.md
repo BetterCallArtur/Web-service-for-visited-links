@@ -39,7 +39,8 @@
  "status": "ok"
 }
 
-### Пример запроса в Python: 
+
+## Пример запроса в Python: 
 import requests
 
 url_visited_links = "http://127.0.0.1:5000/visited_links"
