@@ -47,7 +47,7 @@
 
 ### Пример запроса в Python
 <pre>
-`import requests
+import requests
 
 url_visited_links = "http://127.0.0.1:5000/visited_links"
 data_visited_links = {
@@ -59,13 +59,12 @@ data_visited_links = {
     ]
 }
 
-
 response_visited_links = requests.post(url_visited_links, json=data_visited_links)
 
 if response_visited_links.status_code == 200:
     print("Ссылки успешно добавлены!")
 else:
-    print("Ошибка при добавлении ссылок:", response_visited_links.json()["status"])`
+    print("Ошибка при добавлении ссылок:", response_visited_links.json()["status"])
 </pre>    
 
 
