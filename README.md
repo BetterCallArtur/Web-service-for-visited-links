@@ -42,7 +42,7 @@
 {
  "status": "ok"
 } 
-</pre>
+
 
 
 ### Пример запроса в Python
@@ -65,7 +65,7 @@ if response_visited_links.status_code == 200:
     print("Ссылки успешно добавлены!")
 else:
     print("Ошибка при добавлении ссылок:", response_visited_links.json()["status"])
-</pre>    
+<
 
 
 ## Получение списка уникальных посещенных доменов в заданном временном интервале
@@ -91,7 +91,7 @@ curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
   ],
   "status": "ok"
 }
-<pre>
+
 ### Пример запроса в Python
 <pre>
 import requests
@@ -124,7 +124,7 @@ http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
   ],
   "status": "ok"
 }
-<pre>
+
 
 ## Примечание
 - Сервис использует SQLite в качестве базы данных. Вы можете изменить строку подключения в файле `app.py` по своим требованиям.
