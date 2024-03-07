@@ -47,7 +47,7 @@
 
 ### Пример запроса в Python
 <pre>
-```plaintext
+```python
 import requests
 
 url_visited_links = "http://127.0.0.1:5000/visited_links"
