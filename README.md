@@ -41,11 +41,13 @@
 <pre>
 {
  "status": "ok"
-} ```
+} 
 </pre>
 
 
 ### Пример запроса в Python
+<pre>
+```python
 import requests
 
 url_visited_links = "http://127.0.0.1:5000/visited_links"
@@ -57,6 +59,8 @@ data_visited_links = {
         "https://stackoverflow.com/questions/65724760/how-it-is"
     ]
 }
+```
+</pre>
 
 response_visited_links = requests.post(url_visited_links, json=data_visited_links)
 
