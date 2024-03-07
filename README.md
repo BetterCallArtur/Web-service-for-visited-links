@@ -34,14 +34,14 @@
  "https://sber.ru",
  "https://stackoverflow.com/questions/65724760/how-it-is"
  ] }
-</pre?>
+```
 
 ### Пример ответа 
 ```python
 {
  "status": "ok"
 } 
-</pre?>
+```
 
 
 ### Пример запроса в Python
@@ -64,7 +64,7 @@ if response_visited_links.status_code == 200:
     print("Ссылки успешно добавлены!")
 else:
     print("Ошибка при добавлении ссылок:", response_visited_links.json()["status"])
-</pre?>
+```
 
 
 ## Получение списка уникальных посещенных доменов в заданном временном интервале
@@ -90,7 +90,7 @@ curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
   ],
   "status": "ok"
 }
-</pre?>
+```
 
 ### Пример запроса в Python
 ```python
@@ -109,7 +109,7 @@ if response_visited_domains.status_code == 200:
     print("Уникальные домены:", unique_domains)
 else:
     print("Ошибка при получении уникальных доменов:", response_visited_domains.json()["status"])
-</pre?>
+```
 
 ### Пример запроса через браузер
 Откройте веб-браузер и введите следующий URL, заменив параметры from и to на необходимые значения:
@@ -125,7 +125,7 @@ http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
   ],
   "status": "ok"
 }
-</pre?>
+```
 
 
 ## Примечание
