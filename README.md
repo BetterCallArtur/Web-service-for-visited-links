@@ -76,7 +76,7 @@ URL: `GET /visited_domains?from=1545221231&to=1545217638
 ```bash
 curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638"
 
-*Пример ответа: 
+##### Пример ответа: 
 {
   "domains": [
     "ya.ru",
