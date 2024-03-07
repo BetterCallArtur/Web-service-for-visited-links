@@ -26,7 +26,8 @@
 Описание: Этот эндпоинт принимает список посещенных ссылок от работника и фиксирует их в базе данных. Время посещения ссылок считается временем принятия запроса сервисом.
 
 ### Пример запроса
-<pre>
+</pre>
+```python
 {
  "links": [
  "https://ya.ru/",
@@ -38,7 +39,6 @@
 </pre>
 
 ### Пример ответа 
-<pre>
 {
  "status": "ok"
 } 
@@ -46,7 +46,8 @@
 
 
 ### Пример запроса в Python
-<pre>
+</pre>
+```python
 import requests
 
 url_visited_links = "http://127.0.0.1:5000/visited_links"
@@ -65,7 +66,7 @@ if response_visited_links.status_code == 200:
     print("Ссылки успешно добавлены!")
 else:
     print("Ошибка при добавлении ссылок:", response_visited_links.json()["status"])
-<
+</pre>
 
 
 ## Получение списка уникальных посещенных доменов в заданном временном интервале
@@ -82,7 +83,6 @@ URL: `GET /visited_domains?from=1545221231&to=1545217638
 curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638"
 
 ### Пример ответа
-<pre>
 {
   "domains": [
     "ya.ru",
@@ -93,7 +93,6 @@ curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
 }
 
 ### Пример запроса в Python
-<pre>
 import requests
 
 url_visited_domains = "http://127.0.0.1:5000/visited_domains"
@@ -109,13 +108,12 @@ if response_visited_domains.status_code == 200:
     print("Уникальные домены:", unique_domains)
 else:
     print("Ошибка при получении уникальных доменов:", response_visited_domains.json()["status"])
-<pre>
+
 ### Пример запроса через браузер
 Откройте веб-браузер и введите следующий URL, заменив параметры from и to на необходимые значения:
 http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
 
 ### Пример ответа
-<pre>
 {
   "domains": [
     "ya.ru",
