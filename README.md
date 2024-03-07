@@ -26,7 +26,7 @@
 Описание: Этот эндпоинт принимает список посещенных ссылок от работника и фиксирует их в базе данных. Время посещения ссылок считается временем принятия запроса сервисом.
 
 ### Пример запроса
-</pre>
+<pre>
 {
  "links": [
  "https://ya.ru/",
@@ -37,7 +37,7 @@
 </pre>
 
 ### Пример ответа 
-</pre>
+<pre>
 {
  "status": "ok"
 } 
@@ -45,7 +45,7 @@
 
 
 ### Пример запроса в Python
-</pre>
+<pre>
 import requests
 
 url_visited_links = "http://127.0.0.1:5000/visited_links"
@@ -81,7 +81,7 @@ URL: `GET /visited_domains?from=1545221231&to=1545217638
 curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638"
 
 ### Пример ответа
-</pre>
+<pre>
 {
   "domains": [
     "ya.ru",
@@ -93,7 +93,7 @@ curl -X GET "http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
 </pre>
 
 ### Пример запроса в Python
-</pre>
+<pre>
 import requests
 
 url_visited_domains = "http://127.0.0.1:5000/visited_domains"
@@ -116,7 +116,7 @@ else:
 http://127.0.0.1:5000/visited_domains?from=1545221231&to=1545217638
 
 ### Пример ответа
-</pre>
+<pre>
 {
   "domains": [
     "ya.ru",
